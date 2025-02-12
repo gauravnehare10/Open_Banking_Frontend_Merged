@@ -42,7 +42,7 @@ body {
   
   /* Buttons */
   .btn,
-  .bank-btn {
+  .bank-btn, .transfer-button {
     display: inline-block;
     background: #007bff;
     color: #fff;
@@ -56,7 +56,8 @@ body {
   }
   
   .btn:hover,
-  .bank-btn:hover {
+  .bank-btn:hover,
+  .transfer-button:hover {
     background: #0056b3;
   }
   

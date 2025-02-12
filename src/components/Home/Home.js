@@ -85,6 +85,11 @@ const Home = () => {
     navigate(`/account/${selectedBank}?accountId=${accountId}`);
   };
 
+  const handleTransferClick = () => {
+    navigate(`/transfer-money?bank=${selectedBank}`)
+  }
+
+
   if (!isLoggedIn) {
     return (
       <div className="app-info">
@@ -116,6 +121,7 @@ const Home = () => {
             </option>
           ))}
         </select>
+        <button className="transfer-button" style={{marginLeft: "5px"}} onClick={ handleTransferClick }>Transfer Money</button>
       </div>
 
       {accountDetails.length > 0 ? (

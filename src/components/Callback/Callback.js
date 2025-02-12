@@ -18,6 +18,7 @@ const Callback = () => {
       const hashParams = new URLSearchParams(window.location.hash.substring(1));
       const code = hashParams.get("code");
       const idToken = hashParams.get("id_token");
+      const state = hashParams.get("state");
       const bank = localStorage.getItem("bank_name");
 
       const access_token = getCookie("access_token");
@@ -33,9 +34,8 @@ const Callback = () => {
         console.log("Bank_name:", bank);
 
         try {
-          // Send the code to the backend to exchange for an access token
           const response = await axios.post(
-            `http://127.0.0.1:8000/bank/exchange-token?code=${code}&bank=${bank}`,
+            `http://127.0.0.1:8000/bank/exchange-token?code=${code}&bank=${bank}&state=${state}`,
             {},
             {
               headers: {
@@ -43,11 +43,13 @@ const Callback = () => {
               },
             }
           );
+          if (state === "aisp"){
+            navigate("/");
+          } else {
+            navigate("/process-transaction")
+          }
 
-          console.log("Access Token:", response.data.access_token);
-          localStorage.setItem("access_token", response.data.access_token);
-
-          navigate("/");
+          
         } catch (error) {
           console.error("Token exchange failed:", error);
         }

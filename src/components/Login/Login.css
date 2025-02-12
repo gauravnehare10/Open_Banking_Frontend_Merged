@@ -9,9 +9,9 @@
 .login-container {
   margin-top: 60px;
   display: flex;
+  height: 100vh;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background: linear-gradient(135deg, #d0e9ff, #25b6ff);
   animation: fadeIn 1.5s ease-in-out;
 }
@@ -20,8 +20,9 @@
 .login-box {
   display: flex;
   width: 80%;
+  margin: 30px;
   max-width: 900px;
-  height: 500px;
+  height: auto;
   background: #fff;
   border-radius: 15px;
   overflow: hidden;
@@ -210,9 +211,12 @@
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  .login-container {
+    height: auto;
+  }
+
   .login-box {
     flex-direction: column;
-    height: auto;
   }
 
   .login-left {

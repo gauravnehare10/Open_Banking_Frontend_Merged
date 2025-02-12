@@ -100,7 +100,7 @@ const Register = () => {
             <button className="social-btn apple"></button>
           </div>
           <p className="register-text">
-            Alreaddy have an account? <span className="login-link">Login here</span>
+            Alreaddy have an account? <span className="login-link">Login</span>
           </p>
         </div>
       </div>

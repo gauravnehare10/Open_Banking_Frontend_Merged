@@ -15,6 +15,8 @@ import DirectDebits from "./components/DirectDebits/DirectDebits";
 import StandingOrders from "./components/StandingOrders/StandingOrders";
 import Product from "./components/Product/Product";
 import ScheduledPayments from "./components/ScheduledPayments/ScheduledPayments";
+import TransferMoney from "./components/TransferMoney/TransferMoney";
+import Redirect from "./components/Redirection/Redirection";
 
 function App() {
   return (
@@ -69,7 +71,10 @@ function App() {
             <ScheduledPayments />
           </RestrictedRoute>
         } />
+        <Route path="/transfer-money" element={<TransferMoney />}></Route>
+        <Route path="/redirect/:bank/:consentId" element={<Redirect />} ></Route>
       </Routes>
+      
     </BrowserRouter>
   );
 }

@@ -1,0 +1,115 @@
+/* Scoped Container */
+.transfer-money-container {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Headings */
+.transfer-money-container h3 {
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+/* Dropdown Styling */
+.transfer-money-container select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* Table Styling */
+.transfer-money-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.transfer-money-table th, 
+.transfer-money-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.transfer-money-table th {
+    background-color: #0284a8;
+    font-weight: bold;
+}
+
+/* Input Fields */
+.transfer-money-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Button Styling */
+.transfer-money-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease-in-out;
+}
+
+.transfer-money-btn:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .transfer-money-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .transfer-money-table, 
+    .transfer-money-table th, 
+    .transfer-money-table td {
+        font-size: 0.9rem;
+    }
+
+    .transfer-money-container select, 
+    .transfer-money-input, 
+    .transfer-money-btn {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .transfer-money-container h3 {
+        font-size: 1.2rem;
+    }
+
+    .transfer-money-table, 
+    .transfer-money-table th, 
+    .transfer-money-table td {
+        font-size: 0.85rem;
+    }
+
+    .transfer-money-container select, 
+    .transfer-money-input, 
+    .transfer-money-btn {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+}
