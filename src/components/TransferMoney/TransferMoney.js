@@ -73,7 +73,7 @@ export default function TransferMoney() {
 
     // Handle transfer request
     const handleTransfer = async () => {
-        if (!amount || !selectedBeneficiary) {
+        if (!amount || !schemeName || !identification) {
             alert("Please enter the amount and creditor's details or select a beneficiary.");
             return;
         }

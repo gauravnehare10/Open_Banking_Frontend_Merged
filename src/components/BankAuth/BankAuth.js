@@ -43,7 +43,6 @@ const BankAuth = () => {
         );
 
         if (response.status === 200) {
-          
           window.location.href = response.data.auth_url;
         }
     }

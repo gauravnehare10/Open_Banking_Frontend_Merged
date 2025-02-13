@@ -46,7 +46,7 @@ const Callback = () => {
           if (state === "aisp"){
             navigate("/");
           } else {
-            navigate("/process-transaction")
+            navigate(`/process-transaction/${bank}`)
           }
 
           

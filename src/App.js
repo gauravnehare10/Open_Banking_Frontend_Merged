@@ -17,6 +17,8 @@ import Product from "./components/Product/Product";
 import ScheduledPayments from "./components/ScheduledPayments/ScheduledPayments";
 import TransferMoney from "./components/TransferMoney/TransferMoney";
 import Redirect from "./components/Redirection/Redirection";
+import ProcessTransaction from "./components/ProcessTransaction/ProcessTransaction";
+import PaymentStatus from "./components/PaymentStatus/PaymentStatus";
 
 function App() {
   return (
@@ -73,6 +75,8 @@ function App() {
         } />
         <Route path="/transfer-money" element={<TransferMoney />}></Route>
         <Route path="/redirect/:bank/:consentId" element={<Redirect />} ></Route>
+        <Route path="/process-transaction/:bank" element={<ProcessTransaction />} ></Route>
+        <Route path="/payment-status/:bank/:payment_id" element={<PaymentStatus />}></Route>
       </Routes>
       
     </BrowserRouter>
