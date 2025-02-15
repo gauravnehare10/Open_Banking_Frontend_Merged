@@ -44,7 +44,7 @@ const ProcessTransaction = () => {
         </>
       ):(
         <>
-            <h2 style={{marginTop: '80px', fontSize: '10px'}}>Processing transaction...</h2>
+            <h2 style={{marginTop: '80px', fontSize: '15px'}}>Processing transaction...</h2>
         </>
       )
       }

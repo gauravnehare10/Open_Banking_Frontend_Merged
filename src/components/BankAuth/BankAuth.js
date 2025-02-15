@@ -18,7 +18,7 @@ const BankAuth = () => {
       alert("Please select a bank.");
       return;
     }
-    localStorage.setItem('bank_name', selectedBank)
+    localStorage.setItem('bank_name', selectedBank);
     const access_token = getCookie("access_token");
     try{
     const response = await axios.post(

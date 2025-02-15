@@ -71,7 +71,6 @@ const Home = () => {
     }
   };
 
-  // Handle user selecting a new bank
   const handleBankSelection = (event) => {
     const newBank = event.target.value;
     setSelectedBank(newBank);
@@ -86,6 +85,7 @@ const Home = () => {
   };
 
   const handleTransferClick = () => {
+    localStorage.setItem('bank_name', selectedBank);
     navigate(`/transfer-money?bank=${selectedBank}`)
   }
 
