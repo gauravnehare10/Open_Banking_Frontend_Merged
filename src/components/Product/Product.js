@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { getCookie } from "../../utils";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import "./Product.css";
 
 const Product = () => {
   const [products, setProducts] = useState([]);
   const { bank, account_id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -46,6 +47,7 @@ const Product = () => {
           ))}
         </tbody>
       </table>
+      <button className="back-btn" onClick={ () => navigate(-1) }>Back</button>
     </div>
   );
 };

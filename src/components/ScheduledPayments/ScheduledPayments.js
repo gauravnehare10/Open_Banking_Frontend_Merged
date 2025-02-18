@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./ScheduledPayments.css";
 import { getCookie } from "../../utils";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 const ScheduledPayments = () => {
   const [scheduledPayments, setScheduledPayments] = useState([]);
   const { bank, account_id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -59,6 +60,7 @@ const ScheduledPayments = () => {
           ))}
         </tbody>
       </table>
+      <button className="back-btn" onClick={ () => navigate(-1) }>Back</button>
     </div>
   );
 };

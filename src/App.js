@@ -19,6 +19,7 @@ import TransferMoney from "./components/TransferMoney/TransferMoney";
 import Redirect from "./components/Redirection/Redirection";
 import ProcessTransaction from "./components/ProcessTransaction/ProcessTransaction";
 import PaymentStatus from "./components/PaymentStatus/PaymentStatus";
+import TransactionDetails from "./components/Transactions/TransactionDetails/TransactionDetails";
 
 function App() {
   return (
@@ -77,6 +78,7 @@ function App() {
         <Route path="/redirect/:bank/:consentId" element={<Redirect />} ></Route>
         <Route path="/process-transaction/:bank" element={<ProcessTransaction />} ></Route>
         <Route path="/payment-status/:bank/:payment_id" element={<PaymentStatus />}></Route>
+        <Route path="/:bank/accounts/:account_id/transactions/:TransactionId" element={<TransactionDetails />} ></Route>
       </Routes>
       
     </BrowserRouter>

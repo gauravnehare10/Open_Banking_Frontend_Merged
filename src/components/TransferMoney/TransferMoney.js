@@ -145,6 +145,7 @@ export default function TransferMoney() {
                 </tbody>
             </table>
             <button className="transfer-money-btn" onClick={handleTransfer}>Transfer</button>
+            <button className="back-btn" onClick={ () => navigate(-1) } style={{width: "100%", fontSize: "0.9rem"}}>Cancel</button>
         </div>
     );
 }

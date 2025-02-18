@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./StandingOrders.css";
 import { getCookie } from "../../utils";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 
 const StandingOrders = () => {
   const [standingOrders, setStandingOrders] = useState([]);
   const { bank, account_id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -88,6 +89,7 @@ const StandingOrders = () => {
           ))}
         </tbody>
       </table>
+      <button className="back-btn" onClick={ () => navigate(-1) }>Back</button>
     </div>
   );
 };

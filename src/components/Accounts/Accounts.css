@@ -55,6 +55,19 @@
     font-size: 0.9rem;
     transition: background 0.3s;
   }
+  .back-btn {
+    width: 100px;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 5px;
+    background-color: rgb(173, 30, 30);
+    color: white;
+    border: none;
+  }
+  
+  .back-btn:hover {
+    background-color: rgb(154, 20, 20);
+  }
   
   .account-links a:hover {
     background: #0056b3;
@@ -90,6 +103,10 @@
     .account-links a {
       display: block;
       text-align: center;
+    }
+    
+    .back-btn {
+      width: 100%;
     }
   }
   

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./DirectDebits.css";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { getCookie } from "../../utils";
 
 const DirectDebits = () => {
   const [directDebits, setDirectDebits] = useState([]);
   const { bank, account_id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -60,6 +61,7 @@ const DirectDebits = () => {
           ))}
         </tbody>
       </table>
+      <button className="back-btn" onClick={ () => navigate(-1) }>Back</button>
     </div>
   );
 };

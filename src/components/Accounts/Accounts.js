@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { getCookie } from "../../utils";
-import { Link, useParams, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import './Accounts.css';
 
 const Accounts = () => {
   const [accounts, setAccountData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
   
   const { bank } = useParams();
   const [ searchParams ] = useSearchParams();
@@ -72,6 +73,7 @@ const Accounts = () => {
               <Link to={`/${bank}/accounts/${account.AccountId}/statements`}>Statements</Link>
               <Link to={`/${bank}/accounts/${account.AccountId}/offers`}>Offers</Link>
             </div>
+            <button className="back-btn" onClick={ () => navigate(-1) }>Back</button>
           </div>
         ))
       )}
