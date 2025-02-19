@@ -75,7 +75,7 @@ function App() {
           </RestrictedRoute>
         } />
         <Route path="/transfer-money" element={<TransferMoney />}></Route>
-        <Route path="/redirect/:bank/:consentId" element={<Redirect />} ></Route>
+        <Route path="/redirect/:bank" element={<Redirect />} ></Route>
         <Route path="/process-transaction/:bank" element={<ProcessTransaction />} ></Route>
         <Route path="/payment-status/:bank/:payment_id" element={<PaymentStatus />}></Route>
         <Route path="/:bank/accounts/:account_id/transactions/:TransactionId" element={<TransactionDetails />} ></Route>

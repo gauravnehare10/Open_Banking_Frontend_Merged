@@ -96,8 +96,7 @@ export default function TransferMoney() {
             );
 
             if (response.status === 200) {
-                const consentId = response.data;
-                navigate(`/redirect/${bank}/${consentId}`);
+                navigate(`/redirect/${bank}`);
             } else {
                 alert("Failed to create consent. Please try again.");
             }

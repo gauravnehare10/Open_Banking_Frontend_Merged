@@ -15,7 +15,7 @@
     font-size: 16px;
     font-weight: bold;
     padding: 10px;
-    color: #dc3545;
+    color: rgb(42, 14, 224);
     opacity: 0;
     animation: fadeIn 0.8s ease-in-out forwards;
   }

@@ -4,7 +4,7 @@ import axios from "axios";
 import { getCookie } from "../../utils";
 
 const Redirect = () => {
-  const { bank, consentId } = useParams();
+  const { bank } = useParams();
 
   useEffect(() => {
     const authorizePayment = async () => {
@@ -18,7 +18,7 @@ const Redirect = () => {
           }
 
           const response = await axios.get(
-            `http://localhost:8000/payment-authorize?bank=${bank}&consent_id=${consentId}`, 
+            `http://localhost:8000/payment-authorize?bank=${bank}`,
             {
               headers: { Authorization: `Bearer ${accessToken}` }
             }
@@ -37,7 +37,7 @@ const Redirect = () => {
       };
   
       authorizePayment();
-  }, [bank, consentId]);
+  }, [bank]);
 
   return <h2>Redirecting to Bank for Authorization...</h2>;
 };
