@@ -1,0 +1,81 @@
+.fund-confirmation-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.fund-confirmation-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.fund-confirmation-select,
+.fund-confirmation-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.fund-confirmation-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.fund-confirmation-button:hover {
+  background-color: #0056b3;
+}
+
+.fund-confirmation-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.fund-confirmation-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.fund-confirmation-result {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 480px) {
+  .fund-confirmation-container {
+      width: 90%;
+      padding: 15px;
+  }
+
+  .fund-confirmation-title {
+      font-size: 18px;
+  }
+
+  .fund-confirmation-button {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .fund-confirmation-input,
+  .fund-confirmation-select {
+      font-size: 14px;
+      padding: 8px;
+  }
+}

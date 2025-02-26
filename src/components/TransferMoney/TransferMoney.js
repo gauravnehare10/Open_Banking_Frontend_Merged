@@ -11,7 +11,6 @@ export default function TransferMoney() {
 
     const navigate = useNavigate();
 
-    const [bankAccounts, setBankAccounts] = useState([]);
     const [beneficiaries, setBeneficiaries] = useState([]);
     const [selectedBeneficiary, setSelectedBeneficiary] = useState("");
 
@@ -28,8 +27,6 @@ export default function TransferMoney() {
                     `http://127.0.0.1:8000/bank-accounts/${bank}`,
                     { headers: { Authorization: `Bearer ${getCookie("access_token")}` } }
                 );
-    
-                setBankAccounts(accountsResponse.data);
     
                 let allBeneficiaries = [];
                 await Promise.all(
@@ -59,7 +56,6 @@ export default function TransferMoney() {
         }
     }, [bank]);
 
-    // Handle selection of a beneficiary
     const handleSelectBeneficiary = (beneficiaryId) => {
         setSelectedBeneficiary(beneficiaryId);
         const selected = beneficiaries.find((b) => b.BeneficiaryId === beneficiaryId);
@@ -71,7 +67,6 @@ export default function TransferMoney() {
         }
     };
 
-    // Handle transfer request
     const handleTransfer = async () => {
         if (!amount || !schemeName || !identification) {
             alert("Please enter the amount and creditor's details or select a beneficiary.");

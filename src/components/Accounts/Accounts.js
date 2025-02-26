@@ -66,6 +66,7 @@ const Accounts = () => {
             <div className="account-links">
               <Link to={`/${bank}/accounts/${account.AccountId}/transactions`}>Transactions</Link>
               <Link to={`/${bank}/accounts/${account.AccountId}/beneficiaries`}>Beneficiaries</Link>
+              <Link to={`/${bank}/accounts/${account.AccountId}/balances`}>Balances</Link>
               <Link to={`/${bank}/accounts/${account.AccountId}/direct-debits`}>Direct Debits</Link>
               <Link to={`/${bank}/accounts/${account.AccountId}/standing-orders`}>Standing Orders</Link>
               <Link to={`/${bank}/accounts/${account.AccountId}/scheduled-payments`}>Scheduled Payments</Link>

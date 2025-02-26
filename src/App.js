@@ -20,6 +20,8 @@ import Redirect from "./components/Redirection/Redirection";
 import ProcessTransaction from "./components/ProcessTransaction/ProcessTransaction";
 import PaymentStatus from "./components/PaymentStatus/PaymentStatus";
 import TransactionDetails from "./components/Transactions/TransactionDetails/TransactionDetails";
+import FundConfirmation from "./components/FundConfirmation/FundConfirmation";
+import Balances from "./components/Balances/Balances";
 
 function App() {
   return (
@@ -54,6 +56,11 @@ function App() {
             <Beneficiaries />
           </RestrictedRoute>
         } />
+        <Route path="/:bank/accounts/:account_id/balances" element={
+          <RestrictedRoute>
+            <Balances />
+          </RestrictedRoute>
+        } />
         <Route path="/:bank/accounts/:account_id/direct-debits" element={
           <RestrictedRoute>
             <DirectDebits />
@@ -74,11 +81,20 @@ function App() {
             <ScheduledPayments />
           </RestrictedRoute>
         } />
-        <Route path="/transfer-money" element={<TransferMoney />}></Route>
-        <Route path="/redirect/:bank" element={<Redirect />} ></Route>
+        <Route path="/transfer-money" element={
+          <RestrictedRoute>
+            <TransferMoney />
+          </RestrictedRoute>
+        } />
+        <Route path="/redirect/:bank" element={
+          <RestrictedRoute>
+            <Redirect />
+          </RestrictedRoute>
+          } />
         <Route path="/process-transaction/:bank" element={<ProcessTransaction />} ></Route>
         <Route path="/payment-status/:bank/:payment_id" element={<PaymentStatus />}></Route>
         <Route path="/:bank/accounts/:account_id/transactions/:TransactionId" element={<TransactionDetails />} ></Route>
+        <Route path="/fund-confirmation" element={<FundConfirmation />} ></Route>
       </Routes>
       
     </BrowserRouter>

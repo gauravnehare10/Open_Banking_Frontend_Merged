@@ -44,6 +44,7 @@ const Navbar = () => {
               <li><Link to="/balance" onClick={ handleLinkClick }>Balance</Link></li>
               <li><Link to="/mortgage" onClick={ handleLinkClick }>Mortgage</Link></li>
               <li><Link to="/transaction" onClick={ handleLinkClick }>Transaction</Link></li>
+              <li><Link to="/fund-confirmation" onClick={ handleLinkClick }>Fund Confirmation</Link></li>
               <li><button className="nav-logout-btn" onClick={handleLogout}>Logout</button></li>
             </>
           )}

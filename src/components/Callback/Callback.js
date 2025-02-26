@@ -45,8 +45,22 @@ const Callback = () => {
           );
           if (state === "aisp"){
             navigate("/");
-          } else {
+          } else if(state === "pisp") {
             navigate(`/process-transaction/${bank}`)
+          } else {
+            try {
+              const consent_response = await axios.get(
+                `http://127.0.0.1:8000/cof/get-cof-consent?bank=${bank}`,
+                {
+                  headers: {
+                    Authorization: `Bearer ${access_token}`,
+                  },
+                }
+              );
+              navigate("/");
+            } catch (error) {
+              console.error("Get consent failed:", error);
+            }
           }
 
           
